@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Support - Professional Installation Services</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" onclick="showPage('home')" class="flex-shrink-0 flex items-center gap-2">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-slate-900">Tech Support</span>
+                    </a>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-8">
+                    <a href="#" onclick="showPage('home')" class="text-slate-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="#services" onclick="showPage('home')" class="text-slate-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                    <a href="#contact" onclick="showPage('home')" class="text-slate-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                </div>
+                <div class="flex items-center">
+                    <button onclick="showPage('login')" class="ml-4 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md flex items-center gap-2">
+                        <i class="fa-regular fa-user"></i> Client Portal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main id="main-content">
+        <!-- Landing Page Content (Default) -->
+        <div id="home-page">
+            <!-- Hero Section -->
+            <section class="relative bg-white overflow-hidden">
+                <div class="max-w-7xl mx-auto">
+                    <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                        <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                            <polygon points="50,0 100,0 50,100 0,100" />
+                        </svg>
+                        <div class="pt-10 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-28 pl-4 sm:pl-6 lg:pl-8">
+                            <div class="sm:text-center lg:text-left">
+                                <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
+                                    <span class="block xl:inline">Expert Tech Installation</span>
+                                    <span class="block text-blue-600 xl:inline">& Support Services</span>
+                                </h1>
+                                <p class="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                    Based in Kisii Town, we provide professional installation and configuration for routers, computers, networks, and smart devices. Simple, reliable, and smooth.
+                                </p>
+                                <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                    <div class="rounded-md shadow">
+                                        <button onclick="showPage('login')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg transition-all">
+                                            Book an Appointment
+                                        </button>
+                                    </div>
+                                    <div class="mt-3 sm:mt-0 sm:ml-3">
+                                        <a href="#contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg transition-all">
+                                            Contact Us
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-slate-100 flex items-center justify-center">
+                    <div class="text-9xl text-slate-200">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="py-12 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:text-center">
+                        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Expertise</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                            Everything you need to get connected
+                        </p>
+                        <p class="mt-4 max-w-2xl text-xl text-slate-500 lg:mx-auto">
+                            We handle the hardware and software so you can focus on your business.
+                        </p>
+                    </div>
+
+                    <div class="mt-10">
+                        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                            <!-- Service 1 -->
+                            <div class="relative bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <dt>
+                                    <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                                        <i class="fa-solid fa-wifi"></i>
+                                    </div>
+                                    <p class="ml-16 text-lg leading-6 font-medium text-slate-900">Router & Network Installation</p>
+                                </dt>
+                                <dd class="mt-2 ml-16 text-base text-slate-500">
+                                    Complete setup of home and office networks, WiFi optimization, and secure configuration.
+                                </dd>
+                            </div>
+
+                            <!-- Service 2 -->
+                            <div class="relative bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <dt>
+                                    <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                                        <i class="fa-solid fa-desktop"></i>
+                                    </div>
+                                    <p class="ml-16 text-lg leading-6 font-medium text-slate-900">Computer Setup & Repair</p>
+                                </dt>
+                                <dd class="mt-2 ml-16 text-base text-slate-500">
+                                    Hardware assembly, OS installation, software updates, and troubleshooting for desktops and laptops.
+                                </dd>
+                            </div>
+
+                            <!-- Service 3 -->
+                            <div class="relative bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <dt>
+                                    <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                                        <i class="fa-solid fa-video"></i>
+                                    </div>
+                                    <p class="ml-16 text-lg leading-6 font-medium text-slate-900">CCTV & Security Systems</p>
+                                </dt>
+                                <dd class="mt-2 ml-16 text-base text-slate-500">
+                                    Installation of security cameras and monitoring systems to keep your premises safe.
+                                </dd>
+                            </div>
+
+                            <!-- Service 4 -->
+                            <div class="relative bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <dt>
+                                    <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                                        <i class="fa-solid fa-headset"></i>
+                                    </div>
+                                    <p class="ml-16 text-lg leading-6 font-medium text-slate-900">Technical Consultation</p>
+                                </dt>
+                                <dd class="mt-2 ml-16 text-base text-slate-500">
+                                    Advice on the best equipment to buy and how to structure your tech infrastructure.
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="bg-white py-16 border-t border-slate-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h2 class="text-2xl font-extrabold text-slate-900 sm:text-3xl">Get in touch</h2>
+                            <p class="mt-3 text-lg text-slate-500">
+                                Ready to upgrade your tech? Contact us today for a quote or booking.
+                            </p>
+                            <div class="mt-9">
+                                <div class="flex">
+                                    <div class="flex-shrink-0">
+                                        <i class="fa-solid fa-phone text-slate-400"></i>
+                                    </div>
+                                    <div class="ml-3 text-base text-slate-500">
+                                        <p>0717088089</p>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex">
+                                    <div class="flex-shrink-0">
+                                        <i class="fa-solid fa-envelope text-slate-400"></i>
+                                    </div>
+                                    <div class="ml-3 text-base text-slate-500">
+                                        <p>ianbegi06@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex">
+                                    <div class="flex-shrink-0">
+                                        <i class="fa-brands fa-whatsapp text-slate-400"></i>
+                                    </div>
+                                    <div class="ml-3 text-base text-slate-500">
+                                        <p>0753352216</p>
+                                    </div>
+                                </div>
+                                <div class="mt-6 flex">
+                                    <div class="flex-shrink-0">
+                                        <i class="fa-solid fa-location-dot text-slate-400"></i>
+                                    </div>
+                                    <div class="ml-3 text-base text-slate-500">
+                                        <p>Kisii Town, Kenya</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 sm:mt-16 md:mt-0">
+                            <div class="bg-slate-50 p-8 rounded-xl border border-slate-200 shadow-sm">
+                                <h3 class="text-lg font-medium text-slate-900 mb-4">Quick Message</h3>
+                                <form action="#" method="POST" class="grid grid-cols-1 gap-y-6" onsubmit="event.preventDefault(); alert('Message sent! We will contact you shortly.');">
+                                    <div>
+                                        <label for="full-name" class="block text-sm font-medium text-slate-700">Full name</label>
+                                        <div class="mt-1">
+                                            <input type="text" name="full-name" id="full-name" autocomplete="name" class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md bg-white border" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+                                        <div class="mt-1">
+                                            <input type="email" name="email" id="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md bg-white border" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-slate-700">Message</label>
+                                        <div class="mt-1">
+                                            <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md bg-white border" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login-page" class="hidden min-h-screen bg-slate-50 flex items-center justify-center px-4">
+            <div class="max-w-md w-full bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900">Client Portal</h2>
+                    <p class="text-slate-500 mt-2">Sign in to manage your services and invoices.</p>
+                </div>
+                <form onsubmit="handleLogin(event)" class="space-y-6">
+                    <div>
+                        <label for="email-login" class="block text-sm font-medium text-slate-700">Email Address</label>
+                        <input type="email" id="email-login" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="client@example.com" required value="ianbegi06@gmail.com">
+                    </div>
+                    <div>
+                        <label for="password-login" class="block text-sm font-medium text-slate-700">Password</label>
+                        <input type="password" id="password-login" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="••••••••" required value="password">
+                    </div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-slate-900 hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 transition-colors">
+                        Sign In
+                    </button>
+                </form>
+                <div class="mt-6 text-center">
+                    <button onclick="showPage('home')" class="text-sm text-slate-500 hover:text-blue-600">
+                        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Home
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard / Client Portal Page -->
+        <div id="dashboard-page" class="hidden min-h-screen bg-slate-50">
+            <div class="flex flex-col md:flex-row h-full min-h-screen">
+                <!-- Sidebar -->
+                <aside class="w-full md:w-64 bg-slate-900 text-white flex-shrink-0">
+                    <div class="p-6 border-b border-slate-800">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <span class="font-bold text-xl tracking-tight">Tech Support</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Client Portal</p>
+                    </div>
+                    <nav class="p-4 space-y-2">
+                        <button onclick="switchTab('overview')" id="nav-overview" class="w-full text-left px-4 py-3 rounded-lg bg-blue-600 text-white transition-colors flex items-center gap-3">
+                            <i class="fa-solid fa-chart-pie w-5"></i> Overview
+                        </button>
+                        <button onclick="switchTab('bookings')" id="nav-bookings" class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-300 transition-colors flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-check w-5"></i> My Bookings
+                        </button>
+                        <button onclick="switchTab('invoices')" id="nav-invoices" class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-300 transition-colors flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-file-invoice-dollar w-5"></i> Invoices
+                            </div>
+                            <span id="invoice-badge" class="bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full">1</span>
+                        </button>
+                        <button onclick="showPage('home')" class="w-full text-left px-4 py-3 rounded-lg hover:bg-slate-800 text-slate-300 transition-colors flex items-center gap-3 mt-8 border-t border-slate-800">
+                            <i class="fa-solid fa-arrow-right-from-bracket w-5"></i> Logout
+                        </button>
+                    </nav>
+                </aside>
+
+                <!-- Dashboard Content -->
+                <div class="flex-1 p-4 md:p-8 overflow-y-auto">
+                    <!-- Header -->
+                    <header class="flex justify-between items-center mb-8">
+                        <div>
+                            <h2 class="text-2xl font-bold text-slate-800" id="page-title">Dashboard Overview</h2>
+                            <p class="text-slate-500">Welcome back, Client.</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="relative">
+                                <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+                                <i class="fa-regular fa-bell text-slate-500 text-xl cursor-pointer hover:text-blue-600"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold border border-blue-200">
+                                IB
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Overview Tab -->
+                    <div id="tab-overview" class="fade-in space-y-6">
+                        <!-- Stats Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-500">Total Spent</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 mt-1">KES 45,000</h3>
+                                    </div>
+                                    <div class="p-2 bg-green-50 rounded-lg text-green-600">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-500">Pending Invoices</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 mt-1">1</h3>
+                                    </div>
+                                    <div class="p-2 bg-orange-50 rounded-lg text-orange-600">
+                                        <i class="fa-solid fa-file-invoice"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <p class="text-sm font-medium text-slate-500">Upcoming Services</p>
+                                        <h3 class="text-2xl font-bold text-slate-800 mt-1">Oct 24</h3>
+                                    </div>
+                                    <div class="p-2 bg-blue-50 rounded-lg text-blue-600">
+                                        <i class="fa-solid fa-calendar-day"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Invoices Table Preview -->
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center">
+                                <h3 class="font-bold text-slate-800">Recent Activity</h3>
+                                <button onclick="switchTab('invoices')" class="text-sm text-blue-600 hover:text-blue-700 font-medium">View All</button>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm text-slate-600">
+                                    <thead class="bg-slate-50 text-slate-900 font-semibold">
+                                        <tr>
+                                            <th class="px-6 py-3">Service</th>
+                                            <th class="px-6 py-3">Date</th>
+                                            <th class="px-6 py-3">Amount</th>
+                                            <th class="px-6 py-3">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100" id="overview-invoice-list">
+                                        <!-- Populated by JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bookings Tab -->
+                    <div id="tab-bookings" class="hidden fade-in space-y-6">
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
+                            <h3 class="font-bold text-lg text-slate-800 mb-4">Book New Service</h3>
+                            <form id="booking-form" onsubmit="handleBooking(event)" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Service Type</label>
+                                    <select required class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                                        <option value="">Select a service...</option>
+                                        <option value="router">Router Configuration</option>
+                                        <option value="pc">Computer Repair/Setup</option>
+                                        <option value="network">Network Cabling</option>
+                                        <option value="cctv">CCTV Installation</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Preferred Date</label>
+                                    <input type="date" required class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-sm font-medium text-slate-700 mb-1">Additional Notes</label>
+                                    <textarea rows="3" class="w-full p-2.5 bg-white border border-slate-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Describe your issue or requirements..."></textarea>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <button type="submit" class="bg-blue-600 text-white px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-medium">Confirm Booking</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                            <div class="px-6 py-4 border-b border-slate-100">
+                                <h3 class="font-bold text-slate-800">Upcoming Appointments</h3>
+                            </div>
+                            <div class="p-6 space-y-4" id="bookings-list-container">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Invoices Tab -->
+                    <div id="tab-invoices" class="hidden fade-in space-y-6">
+                        
+                        <!-- Alert Component -->
+                        <div class="bg-orange-50 border-l-4 border-orange-400 p-4 rounded-r-lg shadow-sm flex justify-between items-center">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fa-solid fa-triangle-exclamation text-orange-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm text-orange-700">
+                                        You have 1 unpaid invoice overdue. Please settle it to avoid service interruption.
+                                    </p>
+                                </div>
+                            </div>
+                            <button onclick="alert('Redirecting to payment gateway...')" class="ml-4 bg-orange-100 text-orange-800 px-3 py-1 rounded-md text-sm font-medium hover:bg-orange-200">Pay Now</button>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left text-sm text-slate-600">
+                                    <thead class="bg-slate-50 text-slate-900 font-semibold">
+                                        <tr>
+                                            <th class="px-6 py-4">Invoice ID</th>
+                                            <th class="px-6 py-4">Service</th>
+                                            <th class="px-6 py-4">Date</th>
+                                            <th class="px-6 py-4">Amount</th>
+                                            <th class="px-6 py-4">Status</th>
+                                            <th class="px-6 py-4 text-right">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-slate-100" id="full-invoice-list">
+                                        <!-- Populated by JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800" id="main-footer">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">Tech Support</span>
+                    </div>
+                    <p class="text-sm">
+                        Providing top-tier tech installation and support services in Kisii Town. Your technology partner.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-phone mr-2"></i> 0717088089</li>
+                        <li><i class="fa-brands fa-whatsapp mr-2"></i> 0753352216</li>
+                        <li><i class="fa-solid fa-envelope mr-2"></i> ianbegi06@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot mr-2"></i> Kisii Town, Kenya</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" onclick="showPage('home')" class="hover:text-blue-500">Home</a></li>
+                        <li><a href="#services" onclick="showPage('home')" class="hover:text-blue-500">Services</a></li>
+                        <li><a href="#" onclick="showPage('login')" class="hover:text-blue-500">Client Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-800 text-center text-xs">
+                &copy; 2023 Tech Support. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- State Management ---
+        const DEFAULT_INVOICES = [
+            { id: '#INV-2023-001', service: 'Router Installation', date: 'Oct 12, 2023', amount: 3500, status: 'Paid' },
+            { id: '#INV-2023-002', service: 'Office Networking', date: 'Oct 24, 2023', amount: 15000, status: 'Unpaid' },
+            { id: '#INV-2023-003', service: 'CCTV Maintenance', date: 'Sep 05, 2023', amount: 5000, status: 'Paid' }
+        ];
+
+        const DEFAULT_BOOKINGS = [
+            { service: 'Office Networking Setup', date: 'Oct 24, 2023', time: '10:00 AM', status: 'Confirmed' }
+        ];
+
+        let state = {
+            invoices: [],
+            bookings: []
+        };
+
+        function initData() {
+            const savedInvoices = localStorage.getItem('tech_support_invoices');
+            const savedBookings = localStorage.getItem('tech_support_bookings');
+
+            if (savedInvoices) {
+                state.invoices = JSON.parse(savedInvoices);
+            } else {
+                state.invoices = [...DEFAULT_INVOICES];
+                localStorage.setItem('tech_support_invoices', JSON.stringify(state.invoices));
+            }
+
+            if (savedBookings) {
+                state.bookings = JSON.parse(savedBookings);
+            } else {
+                state.bookings = [...DEFAULT_BOOKINGS];
+                localStorage.setItem('tech_support_bookings', JSON.stringify(state.bookings));
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem('tech_support_invoices', JSON.stringify(state.invoices));
+            localStorage.setItem('tech_support_bookings', JSON.stringify(state.bookings));
+            renderDashboard();
+        }
+
+        // --- Render Functions ---
+        function renderDashboard() {
+            renderInvoices();
+            renderBookings();
+            renderStats();
+        }
+
+        function renderInvoices() {
+            const overviewContainer = document.getElementById('overview-invoice-list');
+            const fullContainer = document.getElementById('full-invoice-list');
+            const pendingCount = state.invoices.filter(inv => inv.status === 'Unpaid').length;
+            
+            // Alert Box Logic
+            const alertBox = document.querySelector('#tab-invoices .bg-orange-50');
+            const sidebarBadge = document.getElementById('invoice-badge');
+            
+            if (pendingCount > 0) {
+                if(alertBox) alertBox.classList.remove('hidden');
+                if(sidebarBadge) {
+                    sidebarBadge.style.display = 'block';
+                    sidebarBadge.textContent = pendingCount;
+                }
+            } else {
+                if(alertBox) alertBox.classList.add('hidden');
+                if(sidebarBadge) sidebarBadge.style.display = 'none';
+            }
+
+            // HTML Generator
+            const generateRow = (inv, isFullView) => {
+                const isUnpaid = inv.status === 'Unpaid';
+                const statusBadge = isUnpaid 
+                    ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800"><span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>Unpaid</span>`
+                    : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium bg-green-100 text-green-800"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>Paid</span>`;
+                
+                const actionBtn = isFullView 
+                    ? (isUnpaid 
+                        ? `<button onclick="payInvoice('${inv.id}')" class="text-blue-600 hover:text-blue-800 text-xs font-bold border border-blue-200 px-3 py-1 rounded bg-white">Pay</button>`
+                        : `<button class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-download"></i></button>`)
+                    : '';
+
+                return `
+                    <tr class="hover:bg-slate-50 transition-colors ${isUnpaid ? 'bg-orange-50/30' : ''}">
+                        ${isFullView ? `<td class="px-6 py-4 font-mono text-xs">${inv.id}</td>` : ''}
+                        <td class="px-6 py-4 ${isFullView ? 'font-medium text-slate-800' : ''}">${inv.service}</td>
+                        <td class="px-6 py-4">${inv.date}</td>
+                        <td class="px-6 py-4">KES ${inv.amount.toLocaleString()}</td>
+                        <td class="px-6 py-4">${statusBadge}</td>
+                        ${isFullView ? `<td class="px-6 py-4 text-right">${actionBtn}</td>` : ''}
+                    </tr>
+                `;
+            };
+
+            // Populate Overview (Last 2)
+            if(overviewContainer) {
+                overviewContainer.innerHTML = state.invoices.slice(0, 2).map(inv => generateRow(inv, false)).join('');
+            }
+
+            // Populate Full List
+            if(fullContainer) {
+                fullContainer.innerHTML = state.invoices.map(inv => generateRow(inv, true)).join('');
+            }
+        }
+
+        function renderBookings() {
+            const container = document.getElementById('bookings-list-container');
+            if(!container) return;
+
+            if (state.bookings.length === 0) {
+                container.innerHTML = `<p class="text-slate-500 text-center py-4">No upcoming appointments.</p>`;
+                return;
+            }
+
+            container.innerHTML = state.bookings.map(booking => `
+                <div class="flex items-center p-4 border border-slate-200 rounded-lg bg-slate-50">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <div class="ml-4 flex-1">
+                        <h4 class="text-sm font-bold text-slate-900">${booking.service}</h4>
+                        <p class="text-xs text-slate-500">${booking.date} • ${booking.time}</p>
+                    </div>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">${booking.status}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderStats() {
+            const totalSpent = state.invoices.reduce((sum, inv) => inv.status === 'Paid' ? sum + inv.amount : sum, 0);
+            const pendingCount = state.invoices.filter(inv => inv.status === 'Unpaid').length;
+            const nextBooking = state.bookings.length > 0 ? state.bookings[0].date : 'None';
+
+            // Find elements by traversing from icon roughly or just assume order
+            // Since we didn't add IDs to stats, we'll try to find them carefully or just accept the static values for now
+            // But let's try to be dynamic if possible.
+            // For this iteration, I'll skip complex DOM traversal for stats to avoid breaking things, 
+            // but the Table/Lists are the most important part of "Functionality".
+            
+            // Actually, let's update the Pending Invoices Stat at least
+            const pendingStatContainer = document.querySelector('.fa-file-invoice');
+            if(pendingStatContainer) {
+                pendingStatContainer.closest('.flex').querySelector('h3').textContent = pendingCount;
+            }
+            
+            const moneyStatContainer = document.querySelector('.fa-money-bill-wave');
+            if(moneyStatContainer) {
+                moneyStatContainer.closest('.flex').querySelector('h3').textContent = 'KES ' + totalSpent.toLocaleString();
+            }
+        }
+
+
+        // --- Routing Logic ---
+        function showPage(pageId) {
+            const homePage = document.getElementById('home-page');
+            const dashboardPage = document.getElementById('dashboard-page');
+            const loginPage = document.getElementById('login-page');
+            const footer = document.getElementById('main-footer');
+            const nav = document.querySelector('nav');
+
+            // Hide all first
+            homePage.classList.add('hidden');
+            dashboardPage.classList.add('hidden');
+            loginPage.classList.add('hidden');
+            
+            if (pageId === 'home') {
+                homePage.classList.remove('hidden');
+                footer.classList.remove('hidden');
+                nav.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            } else if (pageId === 'login') {
+                loginPage.classList.remove('hidden');
+                footer.classList.add('hidden');
+                nav.classList.add('hidden');
+            } else if (pageId === 'dashboard') {
+                dashboardPage.classList.remove('hidden');
+                footer.classList.add('hidden');
+                nav.classList.add('hidden');
+                initData(); // Load data
+                renderDashboard(); // Render data
+                switchTab('overview'); // Default tab
+            }
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            // Simulate Authentication
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.textContent = 'Verifying...';
+            
+            setTimeout(() => {
+                btn.textContent = 'Sign In';
+                showPage('dashboard');
+            }, 1000);
+        }
+
+        function switchTab(tabId) {
+            document.getElementById('tab-overview').classList.add('hidden');
+            document.getElementById('tab-bookings').classList.add('hidden');
+            document.getElementById('tab-invoices').classList.add('hidden');
+            
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+
+            const titles = {
+                'overview': 'Dashboard Overview',
+                'bookings': 'My Bookings',
+                'invoices': 'Invoices & Payments'
+            };
+            document.getElementById('page-title').textContent = titles[tabId];
+
+            const navIds = ['nav-overview', 'nav-bookings', 'nav-invoices'];
+            navIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (id === 'nav-' + tabId) {
+                    el.classList.add('bg-blue-600', 'text-white');
+                    el.classList.remove('text-slate-300', 'hover:bg-slate-800');
+                } else {
+                    el.classList.remove('bg-blue-600', 'text-white');
+                    el.classList.add('text-slate-300', 'hover:bg-slate-800');
+                }
+            });
+        }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            
+            // Get form data
+            const select = e.target.querySelector('select');
+            const dateInput = e.target.querySelector('input[type="date"]');
+            const serviceName = select.options[select.selectedIndex].text;
+            const dateVal = dateInput.value;
+
+            btn.textContent = 'Processing...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                alert('Booking request submitted successfully!');
+                
+                // Add to state
+                state.bookings.unshift({
+                    service: serviceName,
+                    date: dateVal || 'TBD',
+                    time: '09:00 AM', // Default
+                    status: 'Pending'
+                });
+                
+                saveData(); // Save and re-render
+
+                btn.textContent = originalText;
+                btn.disabled = false;
+                e.target.reset();
+                switchTab('bookings');
+            }, 1000);
+        }
+
+        function payInvoice(id) {
+            const confirmed = confirm(`Proceed to pay ${id} via M-PESA?`);
+            if (confirmed) {
+                alert('M-PESA STK Push sent to your phone. Please complete the transaction.');
+                
+                setTimeout(() => {
+                    alert('Payment Received! Thank you.');
+                    
+                    // Update state
+                    const inv = state.invoices.find(i => i.id === id);
+                    if (inv) {
+                        inv.status = 'Paid';
+                        saveData(); // Save and re-render
+                    }
+                }, 2000);
+            }
+        }
+
+        // Initialize on load just in case, but usually triggered by navigation
+        window.addEventListener('DOMContentLoaded', () => {
+            initData();
+        });
+    </script>
+</body>
+</html>
